@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReparaTodo | El Futuro es Manual</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="index.html" class="brand-logo">ReparaTodo</a>
+                <nav class="main-nav">
+                    <a href="pages/cursos.html">Cursos</a>
+                    <a href="planes.html">Planes</a>
+                    <a href="pages/contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container" style="display: contents;">
+                <div class="hero-text slide-up">
+                    <h1>El Poder de Crear.</h1>
+                    <p>Domina habilidades manuales en la era digital. Aprende a reparar, construir y entender el mundo que te rodea con cursos prácticos y directos.</p>
+                    <a href="pages/cursos.html" class="btn btn-primary">Empezar a Aprender</a>
+                </div>
+                <div class="hero-visual slide-up">
+                    <span class="code-line"><span class="comment">// Inicializando sistema...</span></span>
+                    <span class="code-line"><span class="keyword">import</span> { Reparar } <span class="keyword">from</span> <span class="string">'conocimiento'</span>;</span>
+                    <span class="code-line"></span>
+                    <span class="code-line"><span class="keyword">const</span> miHabilidad = <span class="keyword">new</span> Reparar('todo');</span>
+                    <span class="code-line">miHabilidad.<span class="function">aprender</span>();</span>
+                    <span class="code-line">System.out.println("<span class="function">¡Listo para crear!</span>");<span class="cursor"></span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header slide-up">
+                    <h2>Tu Camino Empieza Aquí</h2>
+                </div>
+                <div class="cards-grid">
+                    <div class="course-card slide-up">
+                        <div class="icon">⚡️</div><h3>Electrónica Fundamental</h3><p>De soldaduras a microcontroladores. Entiende y repara los dispositivos que usas.</p>
+                    </div>
+                    <div class="course-card slide-up" style="transition-delay: 0.1s;">
+                        <div class="icon">⚙️</div><h3>Mecánica Doméstica</h3><p>Entiende cómo funcionan los electrodomésticos y dales una segunda vida.</p>
+                    </div>
+                    <div class="course-card slide-up" style="transition-delay: 0.2s;">
+                        <div class="icon">💧</div><h3>Plomería Esencial</h3><p>Fugas, instalaciones y mantenimiento. Resuelve los problemas más comunes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCIÓN DE TESTIMONIOS -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header slide-up">
+                    <h2>Lo que dicen nuestros alumnos</h2>
+                </div>
+                <div class="cards-grid">
+                    <div class="testimonial-card slide-up">
+                        <blockquote>Arreglé mi lavadora gracias al curso de mecánica. Me ahorré una fortuna y ahora entiendo cómo funciona. ¡Increíble!</blockquote>
+                        <span class="testimonial-author">María Rodriguez</span>
+                    </div>
+                    <div class="testimonial-card slide-up" style="transition-delay: 0.1s;">
+                        <blockquote>Siempre quise montar mi propio PC. El curso de hardware me guió paso a paso. Ahora tengo una máquina increíble hecha por mí.</blockquote>
+                        <span class="testimonial-author">Carlos Gómez</span>
+                    </div>
+                     <div class="testimonial-card slide-up" style="transition-delay: 0.2s;">
+                        <blockquote>Como diseñadora, entender de electrónica básica me ha abierto un mundo de posibilidades para mis proyectos. 100% recomendado.</blockquote>
+                        <span class="testimonial-author">Ana Sofía López</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA LLAMADA A LA ACCIÓN -->
+        <section class="section">
+            <div class="container">
+                <div class="cta-section slide-up">
+                    <h2>¿Listo para empezar?</h2>
+                    <p>Únete a miles de personas que están tomando el control y aprendiendo a construir el futuro con sus propias manos.</p>
+                    <a href="planes.html" class="btn btn-primary">Ver Planes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container"><p>&copy; 2024 ReparaTodo. El conocimiento es poder.</p></div>
+    </footer>
+
+    <!-- SCRIPT PARA LAS ANIMACIONES (PONER AL FINAL) -->
+    <script>
+        const animatedElements = document.querySelectorAll('.slide-up, .fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Opcional: deja de observar el elemento una vez que es visible
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.1 // El elemento se anima cuando el 10% es visible
+        });
+
+        animatedElements.forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
